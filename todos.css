@@ -1,0 +1,43 @@
+body{
+	background: orange;
+}
+
+li{
+	border: 2px solid red;
+}
+
+
+
+/*id前要加#*/
+
+#special{
+  background-color: yellow;
+
+}
+
+
+/*class前加.*/
+.completed{
+ text-decoration: line-through;
+
+}
+
+*{
+	border:1px solid lightgrey;
+}
+
+li a{
+   color: red;
+}
+
+
+
+a[href="http://www.baidu.com"]{
+	background-color: blue;
+}
+
+ul:nth-of-type(3){
+	border-color: purple;
+}
+
+

@@ -1,0 +1,37 @@
+h1{
+	color:red;
+}
+
+li{
+	color: green;
+}
+
+
+
+h1{
+	/*color:rgba(0,200,100,0.8);
+	border-color: purple;
+	border-width:5px;
+	border-style: solid;*/
+
+	border:8px dashed;  
+}
+
+/*width
+color
+style*/
+
+
+h4{
+	color:purple;
+	background: rgb(255,100,80);
+}
+
+body{
+	background: pink;
+
+	/*background: url(http://www.zcool.com.cn/work/ZMTYwNTMzMDQ=.html);
+	background-repeat: no-repeat;
+	background-size: cover;*/
+
+}
