@@ -1,0 +1,26 @@
+body {
+	border: 20px solid #bdc3c7;
+	padding:20px;
+	max-width: 700px ;
+	width: 80%;
+	margin: 20px auto;
+	font-family:serif;
+
+}
+
+.date{
+text-transform: uppercase;
+color: #3498db;
+letter-spacing:0.2rem; 
+}
+
+.quote {
+	border-left: 5px solid #bdc3c7;
+   padding-left: 5px;
+}
+	
+
+	h2 {
+		
+color: #2c3e50
+	}
