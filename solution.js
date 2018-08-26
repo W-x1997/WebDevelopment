@@ -45,6 +45,15 @@ function printReverse(num){
 
  }
 
+var obj={
+  name:"wx",
+  age:21,
+  isCool:false;
+  friends:["hhj","rq"],
+  add:function(x,y){
+    return x+y;
+  }
+};
 
 
 // function isUniform(arr){
@@ -85,5 +94,22 @@ function max(arr){
  });
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
