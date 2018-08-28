@@ -16,7 +16,7 @@ function isEven(num){
 }
 
 
-
+ 
 function factorial(num){
   //define a result variable
   var result = 1;
