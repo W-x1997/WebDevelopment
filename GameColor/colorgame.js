@@ -1,36 +1,58 @@
- 
 var numberofsquares=6;
 var colors=generateRandomColors(numberofsquares);
-
-
 var squares=document.querySelectorAll(".square");
 var pickedColor=pickColor();
 var colordisplay=document.getElementById("colordisplay");
-
 var messagedisplay=document.querySelector("#message");
-
 var  h1=document.querySelector("h1");
-
 var resetButton=document.querySelector("#reset");
-
 var modeButtons=document.querySelectorAll(".mode");
 
-for(var i=0;i<modeButtons.length;i++){
+
+
+init();
+
+function init(){
+	for(var i=0;i<modeButtons.length;i++){
 	modeButtons[i].addEventListener("click",function(){
        modeButtons[0].classList.remove("selected");
        modeButtons[1].classList.remove("selected");
-
-       this.classList.add("selected");
-
-       this.textContent==="Easy"? numberofsquares=3:numberofsquares=6;
-       // if(this.textContent==="Easy"){
-       // 	numberofsquares=3;
-       // }else{
-       // 	numberofsquares=6;
-       // }
-       reset();
+        this.classList.add("selected");
+        this.textContent==="Easy"? numberofsquares=3:numberofsquares=6;
+        reset();
 	});
 }
+
+
+
+for(var i=0;i<squares.length;i++){
+
+	squares[i].style.background=colors[i];
+
+	squares[i].addEventListener("click",function(){
+    var clikcolor=this.style.background;
+    if(clikcolor === pickedColor){
+    	messagedisplay.textContent="Correct!";
+    	resetButton.textContent="Play Again!";
+         changeColors(clikcolor);
+          h1.style.background=pickedColor;
+
+    }else{
+    	this.style.background="#232323";
+    	messagedisplay.textContent="Try again!";
+    }
+    
+
+});
+}
+
+reset();
+}
+
+
+
+
+
 
 
 function reset(){
@@ -110,26 +132,26 @@ resetButton.addEventListener("click",function(){
  colordisplay.textContent=pickedColor;
  
 
-for(var i=0;i<squares.length;i++){
+// for(var i=0;i<squares.length;i++){
 
-	squares[i].style.background=colors[i];
+// 	squares[i].style.background=colors[i];
 
-	squares[i].addEventListener("click",function(){
-    var clikcolor=this.style.background;
-    if(clikcolor === pickedColor){
-    	messagedisplay.textContent="Correct!";
-    	resetButton.textContent="Play Again!";
-         changeColors(clikcolor);
-          h1.style.background=pickedColor;
+// 	squares[i].addEventListener("click",function(){
+//     var clikcolor=this.style.background;
+//     if(clikcolor === pickedColor){
+//     	messagedisplay.textContent="Correct!";
+//     	resetButton.textContent="Play Again!";
+//          changeColors(clikcolor);
+//           h1.style.background=pickedColor;
 
-    }else{
-    	this.style.background="#232323";
-    	messagedisplay.textContent="Try again!";
-    }
+//     }else{
+//     	this.style.background="#232323";
+//     	messagedisplay.textContent="Try again!";
+//     }
     
 
-});
-}
+// });
+// }
 
 function changeColors(color){
   for(var i=0;i<squares.length;i++){
