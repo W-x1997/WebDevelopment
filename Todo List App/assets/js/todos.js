@@ -42,7 +42,6 @@ $("input[type='text']").keypress(function(event){
 
 
 
-
 // $("ul").click(function(){
 // 	alert("ul");
 // });
