@@ -1,0 +1,35 @@
+研究了一下如何在chrome浏览器中运行自己编写的插件脚本，发现有另一种不错的方法，可以通过chrome的扩展程序实现，方法如下：
+
+
+1.新建一个manifest.json的文件（扩展程序的配置文件）该文件字符集格式必须为UTF-8
+
+manifest.json代码
+
+{
+  "name": "weixin",
+  "manifest_version": 2,
+  "version": "1.0",
+  "description": "I Love Flutter ~~！",
+  "browser_action": {
+    "default_icon": "1.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["script.js"]
+    }
+  ]
+}
+
+---------------------
+default_icon ： 插件图标 
+matches ： Content Script注入的Web页面 
+js : 注入到匹配的Web页面中的JS文件
+
+---------------------
+注意：要将编写的js脚本文件和json文件放在同一个目录下
+
+2.打开 Chrome菜单–>更多工具–>扩展程序 
+  点击 加载已解压的扩展程序 
+  可以看到程序已经安装成功 
+
